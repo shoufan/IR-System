@@ -1,2 +1,2 @@
 # IR-System
-Information Retrieval System Project
+Information Retrieval System
