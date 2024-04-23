@@ -91,3 +91,9 @@ AUTOTHROTTLE_ENABLED = True
 REQUEST_FINGERPRINTER_IMPLEMENTATION = "2.7"
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
+
+# Maximum depth to crawl
+DEPTH_LIMIT = 3
+
+# Maximum number of pages to crawl (optional)
+CLOSESPIDER_PAGECOUNT = 10
