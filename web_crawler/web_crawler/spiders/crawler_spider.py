@@ -9,6 +9,10 @@ class MySpider(scrapy.Spider):
     def parse(self, response):
         # Extracting content from the webpage
         title = response.css('h1.firstHeading::text').get()
+        if title:
+            title = title.strip()  # Remove leading/trailing whitespace
+        else:
+            title = "Title Not Found"  # Provide a default value
         content = response.css('div#mw-content-text p::text').getall()
 
         yield {
