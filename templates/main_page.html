@@ -20,8 +20,10 @@
             font-size: 36px;
             margin-bottom: 20px;
         }
-        .search-form {
-            margin-bottom: 20px;
+        .search-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
         }
         .search-input {
             width: 70%;
@@ -31,14 +33,23 @@
             border: 1px solid #ccc;
             margin-right: 10px;
         }
-        .search-button {
+        .search-button,
+        .feeling-lucky-button {
             padding: 10px 20px;
             font-size: 16px;
             border-radius: 5px;
             cursor: pointer;
+            margin-right: 10px; /* Add margin between buttons */
+        }
+        .search-button {
             background-color: #66519d;
             color: #fff;
             border: none;
+        }
+        .feeling-lucky-button {
+            background-color: #f0f0f0;
+            color: #000;
+            border: 1px solid #ccc;
         }
     </style>
 </head>
@@ -47,8 +58,11 @@
         <h1>Shoufan Search Engine</h1>
         <form class="search-form" action="/search" method="GET">
             <input class="search-input" type="text" name="query" placeholder="Enter your query...">
-            <button class="search-button" type="submit">Search</button>
         </form>
+        <div class="search-buttons">
+            <button class="search-button" type="submit">Search</button>
+            <button class="feeling-lucky-button">I'm Feeling Lucky</button>
+        </div>
     </div>
 </body>
 </html>
